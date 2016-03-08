@@ -12,7 +12,8 @@ A script to collect your and your friends' duolingo experience metrics and send 
 ### Project and dependencies
 
 ```
-pip install datadog, duolingo-api # and selenium, if you want detailed metrics
+pip install datadog, duolingo-api
+# pip install selenium # if you want detailed metrics
 git clone https://github.com/MartiFlex/Lingodog.git
 cd Lingodog/
 ```
@@ -26,9 +27,9 @@ cd Lingodog/
 
 ### Schedule metric collection
 
-If you're runnig Linux, schedule a cronjob to collect metrics every 10 minutes or so:
+If you're running Linux, schedule a cronjob to collect metrics every 10 minutes or so:
 ```
-(echo "*/10 * * * * $(which python) $(pwd)/lingo_to_dog.py"; crontab -l) | crontab -
+(echo "*/10 * * * * $(which python) $(pwd)/lingodog.py"; crontab -l) | crontab -
 ```
 Otherwise use _launchctl_ (Mac) or _Windows Task Scheduler_ (Windows).
 
